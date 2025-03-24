@@ -1,0 +1,23 @@
+import pandas as pd
+
+#Write the data
+data = [[0,1,2,3,4,5,6,7],
+        [8,9,10,11,12,13,14,15]]
+
+# Create DataFrame
+df_data = pd.DataFrame(data)
+print("df_data is created.")
+
+# Get current time
+import datetime
+current_time = datetime.datetime.now()
+
+# Format time as a string like"2025-03-24_12-15-00"
+time_string = current_time.strftime("%Y-%m-%d_%H-%M-%S")
+
+# Define time string to be usable as filename
+file_name = f"my_file_{time_string}"
+
+# Save the file
+df_covariance.to_excel(file_name+".xlsx")
+print("File is named by time!")
